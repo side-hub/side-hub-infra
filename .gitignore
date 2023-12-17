@@ -19,3 +19,12 @@
 
 # Go workspace file
 go.work
+
+# Secret Config file
+config/secret.yml
+
+.vscode/
+
+# log file
+/log/
+/cmd/log/

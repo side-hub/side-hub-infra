@@ -1,0 +1,18 @@
+basePath: /
+host: localhost:8080
+info:
+  contact: {}
+  description: side hub backend api
+  title: side-hub API
+  version: 0.0.1
+paths:
+  /health:
+    get:
+      description: get health
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: health
+swagger: "2.0"
