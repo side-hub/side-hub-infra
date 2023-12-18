@@ -116,6 +116,8 @@ jobs:
         username: ${{ secrets.AWS_SSH_USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
+          set +x
+          echo "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
           docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           docker stop $ECR_REPOSITORY
           docker rm $ECR_REPOSITORY
