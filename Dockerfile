@@ -1,6 +1,3 @@
-# syntax=docker/dockerfile:1
-
-## Build
 FROM golang:1.20 AS build
 
 WORKDIR /app
@@ -22,5 +19,7 @@ WORKDIR /app
 RUN mkdir /app/log
 
 COPY --from=build /app/cmd/main /app/main
+
+EXPOSE 8500
 
 ENTRYPOINT ["./main"]

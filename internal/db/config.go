@@ -11,7 +11,6 @@ type Config struct {
 	Server   string
 	Name     string
 	Port     int
-	MaxConns int
 	DBMS     string
 }
 

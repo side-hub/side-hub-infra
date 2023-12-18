@@ -21,6 +21,9 @@ const docTemplate = `{
                 "produces": [
                     "application/json"
                 ],
+                "tags": [
+                    "basic"
+                ],
                 "summary": "health",
                 "responses": {
                     "200": {

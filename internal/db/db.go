@@ -9,6 +9,7 @@ import (
 
 const (
 	DefaultDBMS = "mysql"
+	MaxConns    = 4
 )
 
 var sqlConn *sql.DB
@@ -33,6 +34,9 @@ func Open(cfg Config) error {
 	if err != nil {
 		return errors.Wrap(err, "sql.Open fail")
 	}
+
+	db.SetMaxOpenConns(MaxConns)
+	db.SetMaxIdleConns(MaxConns)
 
 	sqlConn = db
 	return nil

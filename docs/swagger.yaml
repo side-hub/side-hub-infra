@@ -15,4 +15,6 @@ paths:
         "200":
           description: OK
       summary: health
+      tags:
+      - basic
 swagger: "2.0"

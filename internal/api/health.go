@@ -7,6 +7,8 @@ import (
 )
 
 // GetHealth
+//
+//	@Tags 			basic
 //	@Summary		health
 //	@Description	get health
 //	@Produce		json
