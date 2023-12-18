@@ -34,7 +34,7 @@ env:
   AWS_REGION: ap-northeast-2 # set this to your preferred AWS region, e.g. us-west-1
   ECR_REPOSITORY: side-hub   # set this to your Amazon ECR repository name
   IMAGE_TAG: latest
-  PORT: 8500
+  PORT: 8080
 
 permissions:
   contents: read
@@ -112,7 +112,7 @@ jobs:
         ECR_REPOSITORY: ${{ env.ECR_REPOSITORY }}
         IMAGE_TAG: ${{ env.IMAGE_TAG }}
       with:
-        envs: ECR_REGISTRY,ECR_REPOSITORY,IMAGE_TAG
+        envs: ECR_REGISTRY,ECR_REPOSITORY,IMAGE_TAG,PORT
         host: ${{ secrets.AWS_SSH_HOST }}
         username: ${{ secrets.AWS_SSH_USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
