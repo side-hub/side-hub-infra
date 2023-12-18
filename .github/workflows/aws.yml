@@ -31,8 +31,8 @@ on:
     branches: [ "heebin" ]
 
 env:
-  AWS_REGION: ap-northeast-2                                                  # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: 444757964245.dkr.ecr.ap-northeast-2.amazonaws.com/side-hub  # set this to your Amazon ECR repository name
+  AWS_REGION: ap-northeast-2 # set this to your preferred AWS region, e.g. us-west-1
+  ECR_REPOSITORY: side-hub   # set this to your Amazon ECR repository name
 
 permissions:
   contents: read
