@@ -20,8 +20,6 @@ const (
 
 func Use(e *echo.Echo) {
 	// default
-	e.Use(middleware.CORS())
-	e.Use(middleware.Secure())
 	e.Use(middleware.Recover())
 	e.Use(middleware.ContextTimeout(RequestTimeout))
 
