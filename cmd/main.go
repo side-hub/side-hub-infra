@@ -11,11 +11,10 @@ const (
 	Address = ":8080"
 )
 
-//	@title			side-hub API
-//	@version		0.0.1
-//	@description	side hub backend api
-//	@host			localhost:8080
-//	@BasePath		/
+// @title		side-hub API
+// @version		0.0.1
+// @description	side hub backend api
+// @BasePath	/
 func main() {
 	log.Init("")
 
